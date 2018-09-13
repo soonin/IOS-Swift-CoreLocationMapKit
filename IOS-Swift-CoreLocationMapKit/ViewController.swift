@@ -7,19 +7,44 @@
 //
 
 import UIKit
+import Foundation
+import CoreLocation
+import MapKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, CLLocationManagerDelegate  {
+    
+    var locationManager = CLLocationManager()
+    
+    @IBOutlet weak var devLatitude: UITextField!
+    @IBOutlet weak var devlongitude: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        print("start did load")
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        print("Start Did Appear")
+        
+        self.locationManager.requestAlwaysAuthorization()
+        self.locationManager.requestWhenInUseAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
+        }
+        
     }
-
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let trueData: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+        print("locations = \(trueData.latitude) \(trueData.longitude)")
+        self.devLatitude!.text = "Latitude: \(trueData.latitude)"
+        self.devlongitude!.text = "Longitude: \(trueData.longitude)"
+    }
 
 }
 

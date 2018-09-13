@@ -12,6 +12,7 @@
 		FA928AB32148FA80006A5A02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA928AB12148FA80006A5A02 /* Main.storyboard */; };
 		FA928AB52148FA83006A5A02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA928AB42148FA83006A5A02 /* Assets.xcassets */; };
 		FA928AB82148FA83006A5A02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA928AB62148FA83006A5A02 /* LaunchScreen.storyboard */; };
+		FA928AC02148FFB8006A5A02 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA928ABF2148FFB8006A5A02 /* DiscoverViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		FA928AB42148FA83006A5A02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA928AB72148FA83006A5A02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA928AB92148FA83006A5A02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA928ABF2148FFB8006A5A02 /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				FA928AAD2148FA80006A5A02 /* AppDelegate.swift */,
 				FA928AAF2148FA80006A5A02 /* ViewController.swift */,
 				FA928AB12148FA80006A5A02 /* Main.storyboard */,
+				FA928ABF2148FFB8006A5A02 /* DiscoverViewController.swift */,
 				FA928AB42148FA83006A5A02 /* Assets.xcassets */,
 				FA928AB62148FA83006A5A02 /* LaunchScreen.storyboard */,
 				FA928AB92148FA83006A5A02 /* Info.plist */,
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA928AC02148FFB8006A5A02 /* DiscoverViewController.swift in Sources */,
 				FA928AB02148FA80006A5A02 /* ViewController.swift in Sources */,
 				FA928AAE2148FA80006A5A02 /* AppDelegate.swift in Sources */,
 			);
